@@ -33,7 +33,12 @@
               "src/manifest.webmanifest",
               "src/assets"
             ],
-            "styles": ["src/main.scss"],
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/main.scss"
+            ],
             "scripts": []
           },
           "configurations": {

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "6473a838f9897c79be16d3ab",
+    "productName": "Orange",
+    "productQuantity": 1500,
+    "productImgURL": "",
+    "productType": "FRUITS",
+    "productMetric": "KG",
+    "productCountryOfOrigin": "EGYPT",
+    "productDescription": "This is A product X",
+    "userId": "6473a4b9f9897c79be16d3a7"
+  },
+  {
+    "id": "6473a8d7f9897c79be16d3ac",
+    "productName": "Kiwi",
+    "productQuantity": 1200,
+    "productImgURL": "",
+    "productType": "FRUITS",
+    "productMetric": "KG",
+    "productCountryOfOrigin": "EGYPT",
+    "productDescription": "This is A product X",
+    "userId": "6473a4b9f9897c79be16d3a7"
+  },
+  {
+    "id": "6473a8f6f9897c79be16d3ad",
+    "productName": "Mango",
+    "productQuantity": 900,
+    "productImgURL": "",
+    "productType": "FRUITS",
+    "productMetric": "KG",
+    "productCountryOfOrigin": "EGYPT",
+    "productDescription": "This is A product X",
+    "userId": "6473a597f9897c79be16d3a9"
+  },
+  {
+    "id": "6473aa03f9897c79be16d3ae",
+    "productName": "Banana",
+    "productQuantity": 1700,
+    "productImgURL": "",
+    "productType": "FRUITS",
+    "productMetric": "KG",
+    "productCountryOfOrigin": "EGYPT",
+    "productDescription": "This is A product X",
+    "userId": "6473a487f9897c79be16d3a5"
+  }
+]

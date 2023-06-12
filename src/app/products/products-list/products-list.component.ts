@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
+  selector: 'app-products-list',
+  templateUrl: './products-list.component.html',
+  styleUrls: ['./products-list.component.scss'],
 })
-export class ProductsComponent implements OnInit {
+export class ProductsListComponent implements OnInit {
   version: string | null = environment.version;
 
   data: any[] = [];
@@ -42,5 +42,8 @@ export class ProductsComponent implements OnInit {
   refactorData(data: any[]): any[] {
     data.forEach((product: any) => {});
     return data;
+  }
+  addProduct() {
+    this.router.navigate(['/products/add-product']).then((r) => {});
   }
 }

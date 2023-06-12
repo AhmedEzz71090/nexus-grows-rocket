@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <div class="options-container d-flex py-3 justify-content-end">
+      <button
+        pButton
+        type="button"
+        icon="pi pi-plus"
+        iconPos="left"
+        class="p-button-outlined p-1"
+        (click)="addProduct()"
+        pTooltip="Add new product"
+        tooltipPosition="left"
+      ></button>
+    </div>
+    <app-breadcrumb></app-breadcrumb>
+    <app-table [data]="data" [cols]="cols" [filterCols]="filterCols" [cid]="cid"></app-table>
+  </div>
+</div>

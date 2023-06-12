@@ -1,0 +1,40 @@
+::ng-deep {
+  .p-breadcrumb {
+    border: none;
+
+    ul {
+      .p-breadcrumb-chevron {
+        line-height: initial;
+        chevronrighticon {
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .p-breadcrumb ul li .p-menuitem-link:focus {
+    box-shadow: none;
+  }
+
+  .last-breadcrumb {
+    a {
+      span {
+        color: #3292c9 !important;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .default-breadcrumb {
+    a {
+      span {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}

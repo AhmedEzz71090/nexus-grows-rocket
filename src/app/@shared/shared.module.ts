@@ -7,10 +7,12 @@ import { TableComponent } from '@shared/components/table/table.component';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { BreadcrumbComponent } from '@shared/components/breadcrumb/breadcrumb.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 @NgModule({
-  imports: [TranslateModule, CommonModule, TableModule, ButtonModule, NgbTooltipModule],
-  declarations: [LoaderComponent, TableComponent],
-  exports: [LoaderComponent, TableComponent],
+  imports: [TranslateModule, CommonModule, TableModule, ButtonModule, NgbTooltipModule, BreadcrumbModule],
+  declarations: [LoaderComponent, TableComponent, BreadcrumbComponent],
+  exports: [LoaderComponent, TableComponent, BreadcrumbComponent],
 })
 export class SharedModule {}

@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+</div>
+
+<div class="container p-3 form-wrapper">
+  <form class="grid d-flex card p-3 flex-row gap-4" [formGroup]="form" (ngSubmit)="addProduct()">
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">Product Name</span>
+      <input type="text" pInputText placeholder="Product Name" formControlName="productName" />
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column dropdown">
+      <span class="p-label py-1">Product Type</span>
+      <p-dropdown
+        [options]="types"
+        formControlName="productType"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="Product Type"
+      ></p-dropdown>
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">Product Quantity</span>
+      <p-inputNumber
+        formControlName="productQuantity"
+        mode="decimal"
+        [min]="0"
+        placeholder="Product Quantity"
+      ></p-inputNumber>
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column dropdown">
+      <span class="p-label py-1">Product Metric</span>
+      <p-dropdown
+        [options]="units"
+        formControlName="productMetric"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="Product Metric"
+      ></p-dropdown>
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">Country Of Origin</span>
+      <input type="text" pInputText placeholder="Country Of Origin" formControlName="productCountryOfOrigin" />
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">Description</span>
+      <textarea
+        [rows]="1"
+        [cols]="30"
+        pInputTextarea
+        [autoResize]="false"
+        placeholder="Description"
+        formControlName="productDescription"
+      ></textarea>
+    </div>
+
+    <button pButton type="submit" label="Save" class="p-button-outlined mt-4" [disabled]="form.invalid"></button>
+  </form>
+</div>

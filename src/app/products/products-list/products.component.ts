@@ -16,7 +16,14 @@ export class ProductsComponent implements OnInit {
   cols: any[] = [];
   filterCols: any[] = [];
   cid = '';
-  constructor(private router: Router, private sharedService: SharedService) {}
+  constructor(private router: Router, private sharedService: SharedService) {
+    sharedService?.breadcrumb?.next([
+      {
+        label: 'Products',
+        styleClass: 'last-breadcrumb',
+      },
+    ]);
+  }
 
   ngOnInit() {
     this.cid = this.router.url;

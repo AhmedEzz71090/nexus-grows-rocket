@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import products from '../products-list/products.json';
+import users from '@app/users/users-list/Users.json';
 import { environment } from '@env/environment';
 import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
 
 @Component({
   selector: 'app-users-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss'],
+  templateUrl: './users-list.component.html',
+  styleUrls: ['./users-list.component.scss'],
 })
-export class ProductsListComponent implements OnInit {
+export class UsersListComponent implements OnInit {
   version: string | null = environment.version;
 
   data: any[] = [];
@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit {
   constructor(private router: Router, private sharedService: SharedService) {
     sharedService?.breadcrumb?.next([
       {
-        label: 'Products',
+        label: 'Users',
         styleClass: 'last-breadcrumb',
       },
     ]);
@@ -27,23 +27,25 @@ export class ProductsListComponent implements OnInit {
 
   ngOnInit() {
     this.cid = this.router.url;
-    this.data = products;
+    this.data = users;
     this.refactorData(this.data);
-    this.cols = [
-      { field: 'productName', header: 'Product Name' },
-      { field: 'productQuantity', header: 'Quantity' },
-      { field: 'productMetric', header: 'Unit' },
-      { field: 'productType', header: 'Category' },
-      { field: 'productCountryOfOrigin', header: 'Country' },
-    ];
-    this.filterCols = ['productName', 'productType', 'productCountryOfOrigin'];
+    setTimeout(() => {
+      this.cols = [
+        { field: 'fullName', header: 'Name' },
+        { field: 'userRole', header: 'Role' },
+        { field: 'userType', header: 'Type' },
+        { field: 'userEmail', header: 'Email' },
+        { field: 'companyName', header: 'Company' },
+      ];
+    }, 0);
+    this.filterCols = ['fullName', 'userType', 'companyName'];
   }
 
   refactorData(data: any[]): any[] {
     data.forEach((product: any) => {});
     return data;
   }
-  addProduct() {
-    this.router.navigate(['/products/add-product']).then((r) => {});
+  addUser() {
+    this.router.navigate(['/users/add-user']).then((r) => {});
   }
 }

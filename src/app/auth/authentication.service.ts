@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Credentials, CredentialsService } from './credentials.service';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 export interface LoginContext {
-  username: string;
+  email: string;
   password: string;
   remember?: boolean;
 }
@@ -17,7 +19,7 @@ export interface LoginContext {
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor(private credentialsService: CredentialsService) {}
+  constructor(private credentialsService: CredentialsService, private http: HttpClient) {}
 
   /**
    * Authenticates the user.
@@ -26,12 +28,21 @@ export class AuthenticationService {
    */
   login(context: LoginContext): Observable<Credentials> {
     // Replace by proper authentication call
-    const data = {
-      username: context.username,
-      token: '123456',
+    const url =
+      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCjxgT9pk782PE1E50yp93OVeUb7aeGnmw';
+    const body = {
+      email: context.email,
+      password: context.password,
     };
-    this.credentialsService.setCredentials(data, context.remember);
-    return of(data);
+    return this.http.post<Credentials>(url, body).pipe(
+      map((data) => {
+        // Assuming the server responds with the user's credentials including a token
+        this.credentialsService.setCredentials(data, context.remember);
+        return data;
+      })
+    );
+    // this.credentialsService.setCredentials(data, context.remember);
+    // return of(data);
   }
 
   /**

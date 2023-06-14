@@ -6,7 +6,6 @@ import { ProductsFormComponent } from '@app/products/products-form/products-form
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
 const routes: Routes = [
-  // Module is lazy loaded, see app-routing.module.ts
   {
     path: '',
     component: ProductsComponent,

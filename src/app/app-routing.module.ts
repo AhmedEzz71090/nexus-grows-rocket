@@ -7,6 +7,7 @@ const routes: Routes = [
     { path: 'about', loadChildren: () => import('./about/about.module').then((m) => m.AboutModule) },
     { path: 'products', loadChildren: () => import('./products/products.module').then((m) => m.ProductsModule) },
     { path: 'users', loadChildren: () => import('./users/users.module').then((m) => m.UsersModule) },
+    { path: 'companies', loadChildren: () => import('./companies/companies.module').then((m) => m.CompaniesModule) },
   ]),
   // Fallback when no prior route is matched
   { path: '**', redirectTo: '', pathMatch: 'full' },

@@ -25,5 +25,6 @@
   "companyEmail": "Company Email",
   "companyLocation": "Company Location",
   "companyAddress": "Company Address",
-  "companyDescription": "Company Description"
+  "companyDescription": "Company Description",
+  "companies": "Companies"
 }

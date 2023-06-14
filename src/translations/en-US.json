@@ -14,5 +14,16 @@
   "Remember me": "Remember me",
   "Version": "Version",
   "Products": "Products",
-  "Users": "Users"
+  "Users": "Users",
+  "companyProfile": "Company Profile",
+  "fullName": "Full Name",
+  "userEmail": "User Email",
+  "userRole": "User Role",
+  "userType": "User Type",
+  "companyName": "Company Name",
+  "companyWebsiteUrl": "Company Website",
+  "companyEmail": "Company Email",
+  "companyLocation": "Company Location",
+  "companyAddress": "Company Address",
+  "companyDescription": "Company Description"
 }

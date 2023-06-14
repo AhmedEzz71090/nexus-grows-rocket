@@ -42,7 +42,9 @@ export class UsersListComponent implements OnInit {
   }
 
   refactorData(data: any[]): any[] {
-    data.forEach((product: any) => {});
+    data.forEach((product: any) => {
+      product.companyName = product.companyProfile[0].companyName;
+    });
     return data;
   }
   addUser() {

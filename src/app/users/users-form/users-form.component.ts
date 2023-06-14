@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-users-form',
@@ -10,15 +10,19 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class UsersFormComponent implements OnInit {
   form = this.fb.group({
-    productName: ['', Validators.required],
-    productType: [''],
-    productQuantity: [''],
-    productMetric: [''],
-    productCountryOfOrigin: [''],
-    productDescription: [''],
+    fullName: ['', Validators.required],
+    userEmail: ['', Validators.email],
+    userRole: [''],
+    userType: [''],
+    companyName: [''],
+    companyWebsiteUrl: [''],
+    companyEmail: ['', Validators.email],
+    companyLocation: [''],
+    companyAddress: [''],
+    companyDescription: [''],
   });
   roles: any[] = [];
-  units: any[] = [];
+  userTypes: any[] = [];
   fieldWidth = 'calc(50% - 1rem)';
 
   constructor(private sharedService: SharedService, private router: Router, private fb: FormBuilder) {
@@ -37,17 +41,33 @@ export class UsersFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.roles = [
-      { name: 'Fruits', value: 'fruits' },
-      { name: 'Vegetables', value: 'vegs' },
+    this.roles = [{ name: 'Admin', value: 'ADMIN' }];
+    this.userTypes = [{ name: 'Custom Broker', value: 'CUSTOMS_BROKER' }];
+  }
+
+  refactorFormValue(formValue: any) {
+    formValue.companyProfile = [
+      {
+        companyEmail: formValue.companyEmail,
+        companyDescription: formValue.companyDescription,
+        companyWebsiteUrl: formValue.companyWebsiteUrl,
+        companyName: formValue.companyName,
+        companyLocation: formValue.companyLocation,
+        companyAddress: formValue.companyAddress,
+      },
     ];
-    this.units = [
-      { name: 'KG', value: 'kg' },
-      { name: 'Ton', value: 'ton' },
-    ];
+
+    delete formValue.companyEmail;
+    delete formValue.companyDescription;
+    delete formValue.companyWebsiteUrl;
+    delete formValue.companyName;
+    delete formValue.companyLocation;
+    delete formValue.companyAddress;
+
+    return formValue;
   }
 
   addUser() {
-    console.log(this.form.value);
+    this.refactorFormValue(this.form.value);
   }
 }

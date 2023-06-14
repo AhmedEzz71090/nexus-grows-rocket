@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+</div>
+
+<div class="container p-3 form-wrapper">
+  <form class="grid d-flex card p-3 flex-row gap-4" [formGroup]="form" (ngSubmit)="addUser()">
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">{{ 'fullName' | translate }}</span>
+      <input type="text" pInputText placeholder="{{ 'fullName' | translate }}" formControlName="fullName" />
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column">
+      <span class="p-label py-1">{{ 'userEmail' | translate }}</span>
+      <input type="text" pInputText placeholder="{{ 'userEmail' | translate }}" formControlName="userEmail" />
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column dropdown">
+      <span class="p-label py-1">{{ 'userRole' | translate }}</span>
+      <p-dropdown
+        [options]="roles"
+        formControlName="userRole"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="{{ 'userRole' | translate }}"
+      ></p-dropdown>
+    </div>
+
+    <div [style.width]="fieldWidth" class="d-flex flex-column dropdown">
+      <span class="p-label py-1">{{ 'userType' | translate }}</span>
+      <p-dropdown
+        [options]="userTypes"
+        formControlName="userType"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="{{ 'userType' | translate }}"
+      ></p-dropdown>
+    </div>
+
+    <!--    Company Section-->
+    <div class="company-section d-flex flex-column w-100">
+      <h3 class="d-flex">{{ 'companyProfile' | translate }}</h3>
+      <div class="w-100 d-flex gap-4 grid">
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyName' | translate }}</span>
+          <input type="text" pInputText placeholder="{{ 'companyName' | translate }}" formControlName="companyName" />
+        </div>
+
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyWebsiteUrl' | translate }}</span>
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'companyWebsiteUrl' | translate }}"
+            formControlName="companyWebsiteUrl"
+          />
+        </div>
+
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyEmail' | translate }}</span>
+          <input type="text" pInputText placeholder="{{ 'companyEmail' | translate }}" formControlName="companyEmail" />
+        </div>
+
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyLocation' | translate }}</span>
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'companyLocation' | translate }}"
+            formControlName="companyLocation"
+          />
+        </div>
+
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyAddress' | translate }}</span>
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'companyAddress' | translate }}"
+            formControlName="companyAddress"
+          />
+        </div>
+
+        <div [style.width]="fieldWidth" class="d-flex flex-column">
+          <span class="p-label py-1">{{ 'companyDescription' | translate }}</span>
+          <textarea
+            [rows]="1"
+            [cols]="30"
+            pInputTextarea
+            [autoResize]="false"
+            placeholder="{{ 'companyDescription' | translate }}"
+            formControlName="companyDescription"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <button pButton type="submit" label="Save" class="p-button-outlined mt-4" [disabled]="form.invalid"></button>
+  </form>
+</div>

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
 
 @Component({
-  selector: 'app-products-list',
+  selector: 'app-users-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss'],
 })

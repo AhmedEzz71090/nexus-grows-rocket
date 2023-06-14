@@ -1,0 +1,129 @@
+[
+  {
+    "id": "6473a487f9897c79be16d3a5",
+    "fullName": "Alaa",
+    "userRole": "ADMIN",
+    "userType": "IMPORTER",
+    "userEmail": "Alaa009@gmail.com",
+    "companyProfile": [
+      {
+        "id": "6473a487f9897c79be16d3a4",
+        "userId": "6473a487f9897c79be16d3a5",
+        "companyEmail": "info@XZComp.com",
+        "companyDescription": "import all type of fruits, vegetables and other",
+        "companyWebsiteUrl": "https://www.XZComp.com/",
+        "companyName": "XZComp",
+        "companyLocation": "UNITED_KINGDOM",
+        "companyAddress": "Newcastle- floor 1"
+      }
+    ],
+    "productList": [
+      {
+        "id": "6473aa03f9897c79be16d3ae",
+        "productName": "Kiwi",
+        "productQuantity": 1000,
+        "productImgURL": "",
+        "productType": "FRUITS",
+        "productMetric": "KG",
+        "productCountryOfOrigin": "EGYPT",
+        "productDescription": "This is A product X",
+        "userId": "6473a487f9897c79be16d3a5"
+      }
+    ]
+  },
+  {
+    "id": "6473a4b9f9897c79be16d3a7",
+    "fullName": "Osama",
+    "userRole": "USER",
+    "userType": "EXPORTER",
+    "userEmail": "Osama009@gmail.com",
+    "companyProfile": [
+      {
+        "id": "6473a4b9f9897c79be16d3a6",
+        "userId": "6473a4b9f9897c79be16d3a7",
+        "companyEmail": "info@AASComp.com",
+        "companyDescription": "Export and mangage all type of fruits, vegetables and other",
+        "companyWebsiteUrl": "https://www.AASComp.com/",
+        "companyName": "AASComp",
+        "companyLocation": "EGYPT",
+        "companyAddress": "Nasser City- floor 1"
+      }
+    ],
+    "productList": [
+      {
+        "id": "6473a838f9897c79be16d3ab",
+        "productName": "Orange",
+        "productQuantity": 1500,
+        "productImgURL": "",
+        "productType": "FRUITS",
+        "productMetric": "KG",
+        "productCountryOfOrigin": "EGYPT",
+        "productDescription": "This is A product X",
+        "userId": "6473a4b9f9897c79be16d3a7"
+      },
+      {
+        "id": "6473a8d7f9897c79be16d3ac",
+        "productName": "Kiwi",
+        "productQuantity": 1000,
+        "productImgURL": "",
+        "productType": "FRUITS",
+        "productMetric": "KG",
+        "productCountryOfOrigin": "EGYPT",
+        "productDescription": "This is A product X",
+        "userId": "6473a4b9f9897c79be16d3a7"
+      }
+    ]
+  },
+  {
+    "id": "6473a597f9897c79be16d3a9",
+    "fullName": "Karim",
+    "userRole": "USER",
+    "userType": "CUSTOMS_BROKER",
+    "userEmail": "Osama009@gmail.com",
+    "companyProfile": [
+      {
+        "id": "6473a597f9897c79be16d3a8",
+        "userId": "6473a597f9897c79be16d3a9",
+        "companyEmail": "info@AASComp.com",
+        "companyDescription": "Export and mangage all type of fruits, vegetables and other",
+        "companyWebsiteUrl": "https://www.AASComp.com/",
+        "companyName": "AASComp",
+        "companyLocation": "EGYPT",
+        "companyAddress": "Nasser City- floor 1"
+      }
+    ],
+    "productList": [
+      {
+        "id": "6473a8f6f9897c79be16d3ad",
+        "productName": "Kiwi",
+        "productQuantity": 1000,
+        "productImgURL": "",
+        "productType": "FRUITS",
+        "productMetric": "KG",
+        "productCountryOfOrigin": "EGYPT",
+        "productDescription": "This is A product X",
+        "userId": "6473a597f9897c79be16d3a9"
+      }
+    ]
+  },
+  {
+    "id": "6473acbcf9897c79be16d3b0",
+    "fullName": "Emad",
+    "userRole": "USER",
+    "userType": "CUSTOMS_BROKER",
+    "userEmail": "Osama009@gmail.com",
+    "companyProfile": [
+      {
+        "id": "6473acbcf9897c79be16d3af",
+        "userId": "6473acbcf9897c79be16d3b0",
+        "companyEmail": "info@AASComp.com",
+        "companyDescription": "ععععع يبليبل س",
+        "companyWebsiteUrl": "https://www.AASComp.com/",
+        "companyName": "AASComp",
+        "companyLocation": "EGYPT",
+        "companyAddress": "Nasser City- floor 1"
+      }
+    ],
+    "productList": []
+  }
+]

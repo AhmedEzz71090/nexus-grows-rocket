@@ -4,7 +4,7 @@ import { SharedService } from '@shared/services/shared.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-products-form',
+  selector: 'app-users-form',
   templateUrl: './products-form.component.html',
   styleUrls: ['./products-form.component.scss'],
 })

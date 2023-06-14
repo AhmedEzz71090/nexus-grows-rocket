@@ -1,0 +1,62 @@
+[
+  {
+    "id": "646f7363f85e3d7354243743",
+    "userId": "646f7364f85e3d7354243744",
+    "companyEmail": "info@XZComp.com",
+    "companyDescription": "import all type of fruits, vegetables and other",
+    "companyWebsiteUrl": "https://www.ALS.com/",
+    "companyName": "ALS",
+    "companyLocation": "EGYPT",
+    "companyAddress": "Cairo- floor 42"
+  },
+  {
+    "id": "64748fc2b209d207043d7127",
+    "userId": "64748fc3b209d207043d7128",
+    "companyEmail": "info@UINVComp.com",
+    "companyDescription": "Import and Export Fruits and Vegetables",
+    "companyWebsiteUrl": "https://www.UINVComp.com/",
+    "companyName": "UINVComp",
+    "companyLocation": "EGYPT",
+    "companyAddress": "October- floor 1"
+  },
+  {
+    "id": "647494efb209d207043d7134",
+    "userId": "647494efb209d207043d7135",
+    "companyEmail": "info@Cust4Mang.com",
+    "companyDescription": "Customs and managments ofr exportand import Managment",
+    "companyWebsiteUrl": "https://www.Cust4Mang.com/",
+    "companyName": "Cust4Mang",
+    "companyLocation": "EGYPT",
+    "companyAddress": "Dokki - XYZ"
+  },
+  {
+    "id": "647494f3b209d207043d7136",
+    "userId": "647494f3b209d207043d7137",
+    "companyEmail": "info@CustomComp.com",
+    "companyDescription": "Custom relationship and managments",
+    "companyWebsiteUrl": "https://www.CustomComp.com/",
+    "companyName": "CustomComp",
+    "companyLocation": "EGYPT",
+    "companyAddress": "Nasser City- floor 1"
+  },
+  {
+    "id": "647494f8b209d207043d7138",
+    "userId": "647494f8b209d207043d7139",
+    "companyEmail": "info@FruitsNVegetables.com",
+    "companyDescription": "Import and Export",
+    "companyWebsiteUrl": "https://www.FruitsNVegetables.com/",
+    "companyName": "FruitsNVegetables",
+    "companyLocation": "UNITED_KINGDOM",
+    "companyAddress": "Newcastle floor 1"
+  },
+  {
+    "id": "647494fcb209d207043d713a",
+    "userId": "647494fcb209d207043d713b",
+    "companyEmail": "info@NwLsComp.com",
+    "companyDescription": "Import And Export",
+    "companyWebsiteUrl": "https://www.NwLsComp.com/",
+    "companyName": "NwLsComp",
+    "companyLocation": "EGYPT",
+    "companyAddress": "Zayed - floor 1"
+  }
+]

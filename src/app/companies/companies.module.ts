@@ -7,9 +7,25 @@ import { CompaniesRoutingModule } from '@app/companies/companies-routing.module'
 import { SharedModule } from '@shared';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { PaginatorModule } from 'primeng/paginator';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [CompaniesComponent, CompaniesListComponent, CompaniesFormComponent],
-  imports: [CommonModule, CompaniesRoutingModule, SharedModule, ButtonModule, TooltipModule],
+  imports: [
+    CommonModule,
+    CompaniesRoutingModule,
+    SharedModule,
+    ButtonModule,
+    TooltipModule,
+    PaginatorModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    InputTextareaModule,
+    TranslateModule,
+  ],
 })
 export class CompaniesModule {}

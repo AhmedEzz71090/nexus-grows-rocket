@@ -55,6 +55,7 @@ export class UsersListComponent implements OnInit {
     });
     return data;
   }
+
   addUser() {
     this.router.navigate(['/users/add-user']).then((r) => {});
   }

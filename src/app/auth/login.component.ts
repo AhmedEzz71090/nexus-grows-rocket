@@ -7,9 +7,9 @@ import { environment } from '@env/environment';
 import { Logger, UntilDestroy, untilDestroyed } from '@shared';
 import { AuthenticationService } from './authentication.service';
 
-const log = new Logger('Login');
+// const log = new Logger('Login');
 
-@UntilDestroy()
+// @UntilDestroy()
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private logger: Logger
   ) {
     this.createForm();
   }
@@ -40,24 +41,24 @@ export class LoginComponent implements OnInit {
         finalize(() => {
           this.loginForm.markAsPristine();
           this.isLoading = false;
-        }),
-        untilDestroyed(this)
+        })
+        // untilDestroyed(this)
       )
-      .subscribe(
-        (credentials) => {
-          log.debug(`${credentials.username} successfully logged in`);
+      .subscribe({
+        next: (credentials) => {
+          this.logger.debug(`${credentials.email} successfully logged in`);
           this.router.navigate([this.route.snapshot.queryParams['redirect'] || '/'], { replaceUrl: true });
         },
-        (error) => {
-          log.debug(`Login error: ${error}`);
+        error: (error) => {
+          this.logger.debug(`Login error: ${error}`);
           this.error = error;
-        }
-      );
+        },
+      });
   }
 
   private createForm() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required],
       remember: true,
     });

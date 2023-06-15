@@ -9,7 +9,7 @@ import { environment } from '@env/environment';
 import { Logger, UntilDestroy, untilDestroyed } from '@shared';
 import { I18nService } from '@app/i18n';
 
-const log = new Logger('App');
+// const log = new Logger('App');
 
 @UntilDestroy()
 @Component({
@@ -23,7 +23,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translateService: TranslateService,
-    private i18nService: I18nService
+    private i18nService: I18nService,
+    private logger: Logger
   ) {}
 
   ngOnInit() {
@@ -32,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
       Logger.enableProductionMode();
     }
 
-    log.debug('init');
+    this.logger.debug('init');
 
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);

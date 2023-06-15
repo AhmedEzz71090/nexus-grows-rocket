@@ -30,6 +30,9 @@
  * If you want to process logs through other outputs than console, you can add LogOutput functions to Logger.outputs.
  */
 
+import { Inject, Injectable } from '@angular/core';
+import { inject } from '@angular/core/testing';
+
 /**
  * The possible log levels.
  * LogLevel.Off is never emitted and only used with Logger.level property to disable logs.
@@ -47,11 +50,15 @@ export enum LogLevel {
  */
 export type LogOutput = (source: string | undefined, level: LogLevel, ...objects: any[]) => void;
 
+@Injectable({
+  providedIn: 'root',
+})
 export class Logger {
   /**
    * Current logging level.
    * Set it to LogLevel.Off to disable logs completely.
    */
+  source: any;
   static level = LogLevel.Debug;
 
   /**
@@ -67,7 +74,7 @@ export class Logger {
     Logger.level = LogLevel.Warning;
   }
 
-  constructor(private source?: string) {}
+  constructor() {}
 
   /**
    * Logs messages or objects  with the debug level.

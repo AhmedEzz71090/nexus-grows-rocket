@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { Logger } from '@shared';
 import enUS from '../../translations/en-US.json';
 
-const log = new Logger('I18nService');
+// const log = new Logger('I18nService');
 const languageKey = 'language';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class I18nService {
 
   private langChangeSubscription!: Subscription;
 
-  constructor(private translateService: TranslateService) {
+  constructor(private translateService: TranslateService, private logger: Logger) {
     // Embed languages to avoid extra HTTP requests
     translateService.setTranslation('en-US', enUS);
   }
@@ -74,7 +74,7 @@ export class I18nService {
 
     language = newLanguage;
 
-    log.debug(`Language set to ${language}`);
+    this.logger.debug(`Language set to ${language}`);
     this.translateService.use(language);
   }
 

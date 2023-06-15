@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '@env/environment';
 import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
-import { AuthModule } from '@app/auth';
+import { AuthModule, CredentialsService } from '@app/auth';
 import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';

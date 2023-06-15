@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { SharedService } from '@shared/services/shared.service';
 
 export interface Credentials {
   // Customize received credentials here

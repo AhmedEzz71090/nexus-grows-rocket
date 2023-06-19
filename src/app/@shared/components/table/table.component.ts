@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Table } from 'primeng/table';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-table',
@@ -10,7 +11,9 @@ export class TableComponent implements OnInit {
   @Input() data: any[] = [];
   @Input() cols: any[] = [];
   @Input() filterCols: any[] = [];
+  @Input() actions: any = [];
   @Input() cid: string = '';
+  @Output() actionsBtnClicked = new EventEmitter();
   fileName = '';
   ngOnInit(): void {
     this.fileName = this.cid.substring(1);
@@ -18,5 +21,8 @@ export class TableComponent implements OnInit {
 
   clear(table: Table) {
     table.clear();
+  }
+  onActionsBtnClick(row: any) {
+    this.actionsBtnClicked.emit(row);
   }
 }

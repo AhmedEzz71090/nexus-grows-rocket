@@ -9,9 +9,10 @@ import { ButtonModule } from 'primeng/button';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { BreadcrumbComponent } from '@shared/components/breadcrumb/breadcrumb.component';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
-  imports: [TranslateModule, CommonModule, TableModule, ButtonModule, NgbTooltipModule, BreadcrumbModule],
+  imports: [TranslateModule, CommonModule, TableModule, ButtonModule, NgbTooltipModule, BreadcrumbModule, MenuModule],
   declarations: [LoaderComponent, TableComponent, BreadcrumbComponent],
   exports: [LoaderComponent, TableComponent, BreadcrumbComponent],
 })

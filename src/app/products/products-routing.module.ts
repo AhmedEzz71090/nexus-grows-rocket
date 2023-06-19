@@ -4,6 +4,7 @@ import { ProductsComponent } from '@app/products/products.component';
 import { ProductsListComponent } from '@app/products/products-list/products-list.component';
 import { ProductsFormComponent } from '@app/products/products-form/products-form.component';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
+import { ProductDetailsComponent } from '@app/products/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: ProductsListComponent, data: { title: marker('Products List') } },
       { path: 'add-product', component: ProductsFormComponent, data: { title: marker('Add Products') } },
+      { path: 'product-details', component: ProductDetailsComponent, data: { title: marker('Product Details') } },
     ],
   },
 ];

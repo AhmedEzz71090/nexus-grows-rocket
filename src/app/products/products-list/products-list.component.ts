@@ -16,6 +16,9 @@ export class ProductsListComponent implements OnInit {
   cols: any[] = [];
   filterCols: any[] = [];
   cid = '';
+  actions: any = [];
+  row: any = {};
+
   constructor(private router: Router, private sharedService: SharedService) {
     sharedService?.breadcrumb?.next([
       {
@@ -29,6 +32,7 @@ export class ProductsListComponent implements OnInit {
     this.cid = this.router.url;
     this.data = products;
     this.refactorData(this.data);
+    this.setActions();
     this.cols = [
       { field: 'productName', header: 'Product Name' },
       { field: 'productQuantity', header: 'Quantity' },
@@ -43,7 +47,24 @@ export class ProductsListComponent implements OnInit {
     data.forEach((product: any) => {});
     return data;
   }
+
   addProduct() {
     this.router.navigate(['/products/add-product']).then((r) => {});
+  }
+
+  setActions() {
+    this.actions = [
+      {
+        label: 'View Details',
+        icon: 'pi pi-eye',
+        command: () => {
+          this.router.navigate(['/products/product-details']).then((r) => {});
+        },
+      },
+    ];
+  }
+
+  openActionsMenu(e: any) {
+    this.row = e;
   }
 }

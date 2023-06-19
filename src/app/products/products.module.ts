@@ -16,6 +16,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CardModule } from 'primeng/card';
 import { FileUploadModule } from 'primeng/fileupload';
+import { MenuModule } from 'primeng/menu';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -32,7 +34,8 @@ import { FileUploadModule } from 'primeng/fileupload';
     InputTextareaModule,
     CardModule,
     FileUploadModule,
+    MenuModule,
   ],
-  declarations: [ProductsComponent, ProductsListComponent, ProductsFormComponent],
+  declarations: [ProductsComponent, ProductsListComponent, ProductsFormComponent, ProductDetailsComponent],
 })
 export class ProductsModule {}

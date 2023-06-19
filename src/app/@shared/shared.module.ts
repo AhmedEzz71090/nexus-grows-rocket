@@ -10,9 +10,19 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { BreadcrumbComponent } from '@shared/components/breadcrumb/breadcrumb.component';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { MenuModule } from 'primeng/menu';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
-  imports: [TranslateModule, CommonModule, TableModule, ButtonModule, NgbTooltipModule, BreadcrumbModule, MenuModule],
+  imports: [
+    TranslateModule,
+    CommonModule,
+    TableModule,
+    ButtonModule,
+    NgbTooltipModule,
+    BreadcrumbModule,
+    MenuModule,
+    InputTextModule,
+  ],
   declarations: [LoaderComponent, TableComponent, BreadcrumbComponent],
   exports: [LoaderComponent, TableComponent, BreadcrumbComponent],
 })

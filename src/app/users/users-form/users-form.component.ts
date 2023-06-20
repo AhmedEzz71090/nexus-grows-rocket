@@ -2,11 +2,35 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { transition, trigger, useAnimation } from '@angular/animations';
+import { HideAnimation, showAnimation } from '@shared/animations/transform-opacity';
 
 @Component({
   selector: 'app-users-form',
   templateUrl: './users-form.component.html',
   styleUrls: ['./users-form.component.scss'],
+  animations: [
+    trigger('showHide', [
+      transition('void => *', [
+        useAnimation(showAnimation, {
+          params: {
+            timings: '300ms ease-in',
+            transform: 'translateY(-10%)',
+            opacity: '0',
+          },
+        }),
+      ]),
+      transition('* => void', [
+        useAnimation(HideAnimation, {
+          params: {
+            timings: '300ms ease-out',
+            transform: 'translateY(-10%)',
+            opacity: '0',
+          },
+        }),
+      ]),
+    ]),
+  ],
 })
 export class UsersFormComponent implements OnInit {
   form = this.fb.group({

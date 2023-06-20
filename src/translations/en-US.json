@@ -26,5 +26,6 @@
   "companyLocation": "Company Location",
   "companyAddress": "Company Address",
   "companyDescription": "Company Description",
-  "companies": "Companies"
+  "companies": "Companies",
+  "actions": "Actions"
 }

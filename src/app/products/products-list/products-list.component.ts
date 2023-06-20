@@ -30,11 +30,16 @@ export class ProductsListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.setCols();
+    this.setActions();
+    this.setFilters();
     this.getData();
     this.cid = this.router.url;
     this.data = products;
     this.refactorData(this.data);
-    this.setActions();
+  }
+
+  setCols() {
     this.cols = [
       { field: 'productName', header: 'Product Name' },
       { field: 'productQuantity', header: 'Quantity' },
@@ -42,6 +47,9 @@ export class ProductsListComponent implements OnInit {
       { field: 'productType', header: 'Category' },
       { field: 'productCountryOfOrigin', header: 'Country' },
     ];
+  }
+
+  setFilters() {
     this.filterCols = ['productName', 'productType', 'productCountryOfOrigin'];
   }
 

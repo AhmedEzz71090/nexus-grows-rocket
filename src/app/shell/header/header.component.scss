@@ -1,7 +1,18 @@
 @import "src/theme/theme-variables";
 
 .navbar {
-  margin-bottom: $spacer;
+  box-shadow: 0 0px 10px #4a4466;
+  a.navbar-brand {
+    color: #4a4466;
+    font-weight: bolder;
+  }
+
+  div.container-fluid {
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+      color: #71679b;
+    }
+  }
 }
 
 .nav-link.dropdown-toggle {

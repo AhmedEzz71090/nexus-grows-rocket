@@ -21,13 +21,13 @@ $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
-$gray-600: #868e96;
+$gray-600: #c5cae9;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-$blue: #0073dd;
+$blue: #1a237e;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #e83e8c;
@@ -37,6 +37,10 @@ $yellow: #ffc107;
 $green: #28a745;
 $teal: #20c997;
 $cyan: #17a2b8;
+$customPrimary: #1a237e;
+$customSecondary: #c5cae9;
+$customSkyblue: #92dce5;
+$customVanilla: #eee5e9;
 
 $theme-colors: (
   primary: $blue,
@@ -47,6 +51,10 @@ $theme-colors: (
   danger: $red,
   light: $gray-100,
   dark: $gray-800,
+  customPrimary: $customPrimary,
+  customSecondary: $customSecondary,
+  customSkyblue: $customSkyblue,
+  customVanilla: $customVanilla,
 );
 
 // Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used

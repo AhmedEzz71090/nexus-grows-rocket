@@ -41,12 +41,13 @@ export class UsersFormComponent implements OnInit {
     companyName: [''],
     companyWebsiteUrl: [''],
     companyEmail: ['', Validators.email],
-    companyLocation: [''],
+    country: [''],
     companyAddress: [''],
     companyDescription: [''],
   });
   roles: any[] = [];
   userTypes: any[] = [];
+  countries: any[] = [];
   fieldWidth = 'calc(50% - 1rem)';
 
   constructor(private sharedService: SharedService, private router: Router, private fb: FormBuilder) {
@@ -65,8 +66,23 @@ export class UsersFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.roles = [{ name: 'Admin', value: 'ADMIN' }];
-    this.userTypes = [{ name: 'Custom Broker', value: 'CUSTOMS_BROKER' }];
+    this.roles = [
+      { name: 'Admin', value: 'ADMIN' },
+      { name: 'User', value: 'USER' },
+    ];
+    this.userTypes = [
+      { name: 'Exporter', value: 'EXPORTER' },
+      { name: 'Importer', value: 'IMPORTER' },
+      { name: 'Custom Broker', value: 'CUSTOMS_BROKER' },
+    ];
+    this.countries = [
+      { name: 'Egypt', value: 'EGYPT' },
+      { name: 'USA', value: 'USA' },
+      { name: 'Canada', value: 'CANADA' },
+      { name: 'United Arab Emirates', value: 'UNITED_ARAB_EMIRATES' },
+      { name: 'United Kingdom', value: 'UNITED_KINGDOM' },
+      { name: 'Saudi Arabia', value: 'SAUDI_ARABIA' },
+    ];
   }
 
   refactorFormValue(formValue: any) {

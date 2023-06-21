@@ -29,5 +29,12 @@
   "companyAddress": "Company Address",
   "companyDescription": "Company Description",
   "companies": "Companies",
-  "actions": "Actions"
+  "actions": "Actions",
+  "signup": {
+    "email": "Email",
+    "password": "Password",
+    "phoneNumber": "Phone Number",
+    "displayName": "Display Name",
+    "signup": "Sign Up"
+  }
 }

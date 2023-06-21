@@ -9,11 +9,12 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./companies-form.component.scss'],
 })
 export class CompaniesFormComponent implements OnInit {
+  countries: any[] = [];
   form = this.fb.group({
     companyName: [''],
     companyWebsiteUrl: [''],
     companyEmail: ['', Validators.email],
-    companyLocation: [''],
+    country: [''],
     companyAddress: [''],
     companyDescription: [''],
   });
@@ -33,7 +34,16 @@ export class CompaniesFormComponent implements OnInit {
     ]);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.countries = [
+      { name: 'Egypt', value: 'EGYPT' },
+      { name: 'USA', value: 'USA' },
+      { name: 'Canada', value: 'CANADA' },
+      { name: 'United Arab Emirates', value: 'UNITED_ARAB_EMIRATES' },
+      { name: 'United Kingdom', value: 'UNITED_KINGDOM' },
+      { name: 'Saudi Arabia', value: 'SAUDI_ARABIA' },
+    ];
+  }
 
   addCompany() {
     console.log(this.form.value);

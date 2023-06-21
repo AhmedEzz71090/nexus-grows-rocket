@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   error: string | undefined;
   loginForm!: FormGroup;
   isLoading = false;
-
+  registered = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,

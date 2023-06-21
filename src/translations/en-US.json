@@ -13,6 +13,8 @@
   "Username or password incorrect.": "Username or password incorrect.",
   "Remember me": "Remember me",
   "Version": "Version",
+  "exportCSV": "Export CSV",
+  "clearFilters": "Clear filters",
   "Products": "Products",
   "Users": "Users",
   "companyProfile": "Company Profile",

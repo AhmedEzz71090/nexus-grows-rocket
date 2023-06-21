@@ -152,5 +152,8 @@
       }
     }
   },
-  "defaultProject": "nexus-grows"
+  "defaultProject": "nexus-grows",
+  "cli": {
+    "analytics": "f4d00fa3-8691-4aaa-afc7-ce4d82de0905"
+  }
 }

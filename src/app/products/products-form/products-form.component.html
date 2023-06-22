@@ -43,9 +43,16 @@
       ></p-dropdown>
     </div>
 
-    <div [style.width]="fieldWidth" class="d-flex flex-column">
+    <div [style.width]="fieldWidth" class="d-flex flex-column dropdown">
       <span class="p-label py-1">Country Of Origin</span>
-      <input type="text" pInputText placeholder="Country Of Origin" formControlName="productCountryOfOrigin" />
+      <p-dropdown
+        [options]="countries"
+        formControlName="productCountryOfOrigin"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="Country Of Origin"
+      >
+      </p-dropdown>
     </div>
 
     <div [style.width]="fieldWidth" class="d-flex flex-column">

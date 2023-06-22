@@ -18,6 +18,7 @@ import { CardModule } from 'primeng/card';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MenuModule } from 'primeng/menu';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     CardModule,
     FileUploadModule,
     MenuModule,
+    ToastModule,
   ],
   declarations: [ProductsComponent, ProductsListComponent, ProductsFormComponent, ProductDetailsComponent],
 })

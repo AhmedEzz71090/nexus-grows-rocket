@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import users from '@app/users/users-list/Users.json';
 import { environment } from '@env/environment';
 import { Router } from '@angular/router';
 import { SharedService } from '@shared/services/shared.service';
 import { HttpClient } from '@angular/common/http';
+import { takeWhile } from 'rxjs';
 
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.scss'],
 })
-export class UsersListComponent implements OnInit {
+export class UsersListComponent implements OnInit, OnDestroy {
   version: string | null = environment.version;
-
+  alive = true;
   data: any[] = [];
   cols: any[] = [];
   filterCols: any[] = [];
@@ -28,9 +29,7 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
     this.cid = this.router.url;
-    this.data = users;
     this.getData();
-    this.refactorData(this.data);
     setTimeout(() => {
       this.cols = [
         { field: 'fullName', header: 'Name' },
@@ -44,9 +43,13 @@ export class UsersListComponent implements OnInit {
   }
 
   getData() {
-    this.http.get('/user?userId=64748fc3b209d207043d7128').subscribe((res: any) => {
-      console.log(res);
-    });
+    this.http
+      .get('/user?userId=647494efb209d207043d7135')
+      .pipe(takeWhile(() => this.alive))
+      .subscribe((res: any) => {
+        this.refactorData(res);
+        this.data = res;
+      });
   }
 
   refactorData(data: any[]): any[] {
@@ -58,5 +61,9 @@ export class UsersListComponent implements OnInit {
 
   addUser() {
     this.router.navigate(['/users/add-user']).then((r) => {});
+  }
+
+  ngOnDestroy(): void {
+    this.alive = false;
   }
 }

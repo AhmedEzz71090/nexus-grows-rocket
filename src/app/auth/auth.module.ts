@@ -10,6 +10,7 @@ import { LoginComponent } from './login.component';
 import { SignupComponent } from './signup/signup.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { InputMaskModule } from 'primeng/inputmask';
     FormsModule,
     InputTextModule,
     InputMaskModule,
+    ButtonModule,
   ],
   declarations: [LoginComponent, SignupComponent],
 })

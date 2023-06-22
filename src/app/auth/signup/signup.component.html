@@ -35,6 +35,13 @@
             formControlName="displayName"
           />
         </div>
+        <button
+          pButton
+          type="submit"
+          label="{{ 'signup.signup' | translate }}"
+          class="p-button-outlined mt-4"
+          [disabled]="signupForm.invalid"
+        ></button>
       </form>
     </div>
   </div>

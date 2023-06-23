@@ -2,6 +2,9 @@
   p-table {
     .p-datatable {
       box-shadow: 0 6px 10px -10px rgb(204, 204, 204);
+      .p-datatable-wrapper {
+        height: calc(100vh - 300px);
+      }
     }
   }
 
